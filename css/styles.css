@@ -11,11 +11,13 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 :root {
-  --blue: #007bff;
+  --blue: #105284;
+  --blue-darker: #0d3d62;
   --indigo: #6610f2;
   --purple: #6f42c1;
   --pink: #e83e8c;
   --red: #dc3545;
+  --red-darker: rgb(140, 31, 31);
   --orange: #bd5d38;
   --yellow: #ffc107;
   --green: #28a745;
@@ -55,7 +57,7 @@ html {
 }
 
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
-  display: block;
+  display: block;  
 }
 
 body {
@@ -159,7 +161,7 @@ sup {
 }
 
 a {
-  color: #bd5d38;
+  color: var(--cyan);
   text-decoration: none;
   background-color: transparent;
 }
@@ -208,6 +210,13 @@ svg {
 
 table {
   border-collapse: collapse;
+  max-width: 360px;
+  margin: 0 10px;
+}
+
+.table-group {  
+  width: 100%;
+  display: flex;
 }
 
 caption {
@@ -2472,32 +2481,32 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #bd5d38;
-  border-color: #bd5d38;
+  background-color: var(--green);
+  border-color: var(--green);
 }
 .btn-primary:hover {
   color: #fff;
-  background-color: #9f4e2f;
-  border-color: #964a2c;
+  background-color: var(--teal);
+  border-color: var(--teal);
 }
 .btn-primary:focus, .btn-primary.focus {
   color: #fff;
-  background-color: #9f4e2f;
-  border-color: #964a2c;
-  box-shadow: 0 0 0 0.2rem rgba(199, 117, 86, 0.5);
+  background-color: var(--cyan);
+  border-color: var(--cyan);
+  box-shadow: 0 0 0 0.2rem var(--cyan);
 }
 .btn-primary.disabled, .btn-primary:disabled {
   color: #fff;
-  background-color: #bd5d38;
-  border-color: #bd5d38;
+  background-color: var(--green);
+  border-color: var(--green);
 }
 .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle {
   color: #fff;
-  background-color: #964a2c;
-  border-color: #8c4529;
+  background-color: var(--green);
+  border-color: var(--green);
 }
 .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, .show > .btn-primary.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem rgba(199, 117, 86, 0.5);
+  box-shadow: 0 0 0 0.2rem var(--teal);
 }
 
 .btn-secondary {
@@ -4706,7 +4715,7 @@ a.badge:hover, a.badge:focus {
 
 .badge-primary {
   color: #fff;
-  background-color: #bd5d38;
+  background-color: var(--red-darker);
 }
 a.badge-primary:hover, a.badge-primary:focus {
   color: #fff;
@@ -6097,7 +6106,7 @@ a.close.disabled {
 }
 
 .bg-primary {
-  background-color: #bd5d38 !important;
+  background-color: var(--blue) !important;
 }
 
 a.bg-primary:hover, a.bg-primary:focus,
@@ -9799,7 +9808,7 @@ button.bg-dark:focus {
 }
 
 .text-primary {
-  color: #bd5d38 !important;
+  color: var(--blue) !important;
 }
 
 a.text-primary:hover, a.text-primary:focus {
@@ -10090,7 +10099,7 @@ p.lead {
   justify-content: center;
   height: 3.5rem;
   width: 3.5rem;
-  background-color: #495057;
+  background-color: #495057;  
   color: #fff;
   border-radius: 100%;
   font-size: 1.5rem;
@@ -10100,7 +10109,7 @@ p.lead {
   margin-right: 0;
 }
 .social-icons .social-icon:hover {
-  background-color: #bd5d38;
+  background-color: var(--blue);
 }
 
 .dev-icons {
@@ -10112,7 +10121,7 @@ section.resume-section {
   align-items: center;
   padding-left: 1rem;
   padding-right: 1rem;
-  padding-top: 5rem;
+  padding-top: 1rem;
   padding-bottom: 5rem;
   max-width: 75rem;
 }
@@ -10129,7 +10138,7 @@ section.resume-section .resume-section-content {
   section.resume-section {
     padding-left: 3rem;
     padding-right: 3rem;
-    padding-top: 5rem;
+    padding-top: 2rem;
     padding-bottom: 5rem;
   }
 }
